@@ -31,7 +31,7 @@ dev_apps/system_patch_checker.py
 dev_apps/dashboard_dynamic.py 
 dev_apps/https_tls_scanner.py 
 dev_apps/registry_privacy_checker.py
-
+dev_apps/policy_compliance_checker.py
 # Virtual environment
 .venv/
 venv/
