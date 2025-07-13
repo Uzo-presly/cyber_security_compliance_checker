@@ -12,7 +12,7 @@ Each tool focuses on a specific area such as GDPR policy compliance, TLS/SSL val
 
     Tools & Scripts
 
-        1. run_tls_checker.py
+        1. https_tls_flexible_scanner.py
 
         2. run_gdpr_ai_v2.py
 
