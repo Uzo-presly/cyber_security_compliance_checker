@@ -41,14 +41,14 @@ Install dependencies:
     pip install -r requirements.txt
 
 🔧 Tools & Scripts
-1. run_tls_checker.py
+1. https_tls_flexible_scanner.py
 
 ✅ Purpose:
 Check if a website or server uses secure TLS protocols and identify weak cipher suites.
 
 ✅ Usage:
 
-python run_tls_checker.py --host example.com --port 443
+python https_tls_flexible_scanner.py --host example.com --port 443
 
 ✅ Output:
 Reports TLS version, certificate expiry, and any insecure protocols.
@@ -98,10 +98,6 @@ pip install -r requirements.txt
     Fork and submit a pull request if you'd like to add a script.
 
     Community roadmap will be maintained in ROADMAP.md (coming soon).
-
-📜 License
-
-MIT License. Feel free to fork and build on it — just give credit!
 
 This project is a modular Python-based toolkit that shall also help you scan and analyze codebases, system settings,
  and policies for compliance with various data protection frameworks:
