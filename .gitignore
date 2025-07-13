@@ -1,0 +1,81 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+#python files with dot as prefix, implying not to be used for the project
+dev_apps/.*.py
+#some of my beloved file that i do not wish to share which are in the folder structure for the project
+dev_apps/hipaa-simplification-201303.pdf 
+dev_apps/NDPR-Implementation-Framework.pdf 
+dev_apps/with_explaination_cyber_security_proj_runner1.txt
+dev_apps/explaination_of_run_gdpr_AI_powered_v2_py_script.txt 
+dev_apps/.config2.json 
+dev_apps/gdpr_checker_AI_powered.py 
+dev_apps/policy_test.txt
+dev_apps/nist_full.txt
+dev_apps/run_compliance2.bat
+dev_apps/run_compliance2.sh
+dev_apps/running_gdpr_Check.py
+dev_apps/run_nist.py
+dev_apps/run_ndpr.py
+dev_apps/run_hipaa.py
+dev_apps/run_gdpr.py
+dev_apps/ndpr_checker.py 
+dev_apps/.nist_full.txt
+dev_apps/gdpr_ai_checker.py
+dev_apps/schedule_watch.py
+dev_apps/system_patch_checker.py
+dev_apps/dashboard_dynamic.py 
+dev_apps/https_tls_scanner.py 
+dev_apps/registry_privacy_checker.py
+
+# Virtual environment
+.venv/
+venv/
+env/
+myvenv/
+
+# Environment variable files
+.env
+*.env
+
+# Thonny & VSCode IDE folders and backup files
+.thonny/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Output reports and logs
+results/
+*.log
+*.txt
+*.csv
+
+# OS and editor-specific
+.DS_Store
+Thumbs.db
+
+# Compiled objects / temp files
+*.o
+*.out
+*.tmp
+*.bak
+*.old
+
+# Python wheel package builds
+build/
+dist/
+*.egg-info/
+
+# Test cache
+.pytest_cache/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# System trash
+.Trash-*/

@@ -1,0 +1,23 @@
+{
+  "policy_compliance_target": "example_company_papers",
+  "policy_compliance_framework": "GDPR",
+  "tls_host": "example.com",
+  "tls_port": 443,
+
+  "run_tls_scan": true,
+  "run_access_control": true,
+  "run_event_log": true,
+  "run_firewall_check": true,
+  "run_patch_check": true,
+  "run_registry_check": true,
+
+  "run_gdpr_check": true,
+  "run_hipaa_check": true,
+  "run_ndpr_check": true,
+  "run_nist_check": true,
+  "run_vulnerable_code_check": true,
+  "check_compliance_with_openai": true,
+  "run_for_cybersecurity_regulatory_policy": true,
+  "save_output_to_file": true
+}
+
