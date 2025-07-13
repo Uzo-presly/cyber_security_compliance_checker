@@ -116,6 +116,6 @@ Expected scripts that:
 - 🔐 Perform firewall checks--	-	-Done
 - 🔍 Run static code scans--	-	-Done
 - 📊 Perform compliance analysis-	-On-going
-- 🧠 Leverage AI (via OpenAI API) to reason about policies-	-Done
+- 🧠 Leverage AI (via OpenAI API) to reason about policies-	-On-going
 - Check if a website or server uses secure TLS protocols and identify weak cipher suites.-	-Done
 - Securely clean recycle bin /Trash-	-Done
