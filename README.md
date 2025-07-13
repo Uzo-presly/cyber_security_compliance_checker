@@ -28,7 +28,7 @@ Each tool focuses on a specific area such as GDPR policy compliance, TLS/SSL val
 
     Clone the repository:
 
-git clone https://github.com/your-username/cyber_security_compliance_checker.git
+git clone https://github.com/uzo-presly/cyber_security_compliance_checker.git
 cd cyber_security_compliance_checker
 
 Create and activate a virtual environment:

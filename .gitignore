@@ -32,6 +32,7 @@ dev_apps/dashboard_dynamic.py
 dev_apps/https_tls_scanner.py 
 dev_apps/registry_privacy_checker.py
 dev_apps/policy_compliance_checker.py
+grant_accountability_kit.txt
 # Virtual environment
 .venv/
 venv/
