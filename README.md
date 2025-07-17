@@ -115,7 +115,7 @@ To change directory on cmd on windows so as to execute a file, see the following
 assuming we are here 
 c:\Users>
 and we want to get to a  path like \Users\mrs Water\Documents\python tools
-manually go to the location, and press shift while you right-click on one of the files of the intended location, like \Users\mrs Water\Documents\python tools
+manually go to the location, and press shift while you right-click on the folder of the intended python files to execute, like \Users\mrs Water\Documents\python tools
 and copy the full path
 then go back to cmd box and paste in the path in front of c:\Users>
 
