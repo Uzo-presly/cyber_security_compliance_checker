@@ -91,6 +91,58 @@ You can install all dependencies via:
 
 pip install -r requirements.txt
 
+
+
+How to Install pywin32 on Your Windows PC
+🔧 Step-by-Step:
+
+    Open CMD (Command Prompt)
+
+        Press Windows + R
+
+        Type cmd
+
+        Press Enter
+        (Alternatively, you can right-click and select "Run as administrator" to be safe.)
+
+    Check that Python and pip are installed
+
+python --version
+pip --version
+
+If both work and return versions like Python 3.10.11, proceed.
+
+If they don’t work, download Python from https://www.python.org/downloads/windows
+✅ During install, make sure to check "Add Python to PATH"
+
+To change directory on cmd on windows so as to execute a file, see the following example:
+assuming we are here 
+c:\Users>
+and we want to get to a  path like \Users\mrs Water\Documents\python tools
+manually go tyo the location, and press shift while you right-click on one of the files of the intended location, like \Users\mrs Water\Documents\python tools
+and copy the full path
+then cd c:\Users\mrs Water\Documents\python tools
+and presto! you should be there. Now go ahead to execute your python file
+example python win_event_log_analyzer.py
+However make sure you already have python installed on your windows pc
+    Install pywin32
+
+pip install pywin32
+
+This will download and install the required modules from the Python Package Index (PyPI).
+🔎 How to Confirm It Worked
+
+After install, run:
+
+python
+>>> import win32evtlog
+>>> import win32api
+>>> exit()
+
+If you see no errors, you're ready to run the scripts like:
+
+python win_event_log_analyzer.py
+
 🤝 How to Contribute
 
     Open an issue for bugs, improvements, or regulatory framework suggestions.
