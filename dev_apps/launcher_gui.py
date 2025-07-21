@@ -5,7 +5,7 @@ import os
 
 # Path to your built .exe apps
 APP_PATHS = {
-    "User Account Checker": "dist/user_account_checker_extended.exe",
+    "User Account Checker": "dist/users_permission_checker.exe",
     "Network Info Tool": "dist/network_info_tool.exe",
     "Disk Usage Reporter": "dist/disk_usage_reporter.exe"
 }

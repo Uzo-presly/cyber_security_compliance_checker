@@ -5,8 +5,10 @@ __pycache__/
 *.pyd
 *.pdb
 *.pkl
+
 #python files with dot as prefix, implying not to be used for the project
 dev_apps/.*.py
+
 #some of my beloved file that i do not wish to share which are in the folder structure for the project
 dev_apps/hipaa-simplification-201303.pdf 
 dev_apps/NDPR-Implementation-Framework.pdf 
@@ -32,6 +34,7 @@ dev_apps/dashboard_dynamic.py
 dev_apps/https_tls_scanner.py 
 dev_apps/registry_privacy_checker.py
 dev_apps/policy_compliance_checker.py
+dev_apps/smartclinichealthrecords.com
 grant_accountability_kit.txt
 # Virtual environment
 .venv/
@@ -80,3 +83,5 @@ dist/
 
 # System trash
 .Trash-*/
+
+*.spec
