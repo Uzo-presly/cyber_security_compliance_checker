@@ -24,7 +24,7 @@ You are looking at largely, a Python-based toolkit primarily to help users scan 
         1. cyber_audit_files_for_regulators.py 
 
         2. user_account_checker_extended.py
-
+	
         3. (More scripts…)
 
 	Requirements
@@ -35,17 +35,17 @@ You are looking at largely, a Python-based toolkit primarily to help users scan 
 
 🧰 Getting Started
 
-    Clone the repository:
+    		Clone the repository:
 
-git clone https://github.com/uzo-presly/cyber_security_compliance_checker.git
+	git clone https://github.com/uzo-presly/cyber_security_compliance_checker.git
 
 cd cyber_security_compliance_checker
 
 Create and activate a virtual environment:
 
-python3 -m venv myvenv
+	python3 -m venv myvenv
 
-source myvenv/bin/activate
+	source myvenv/bin/activate
 
 Install dependencies:
 
@@ -67,7 +67,7 @@ Beside almost each python script, is a .txt file with a detailed explanation of 
 
 You can install all dependencies via:
 
-pip install -r requirements.txt
+	pip install -r requirements.txt
 
 
 
@@ -102,13 +102,13 @@ and we want to get to a  path like:
 
 .., just manually go to that location on your PC, and press SHIFT while you Right-click on the folder containing the intended python scripts to be run,
 
- a cpoied path could look like this example:
+ a copied path could look like this example:
 
 	\Users\mrs Water\Documents\python tools
 
 .., just go ahead and copy the full path by clicking the 'copy path' on the pop-up box, 
 
-then go back to CMD-page and paste in the path in front of:
+then go back to CMD-page and paste in front pf the prompt using the change directory command (cd):
 
 	c:\Users>
 
@@ -116,13 +116,21 @@ for instance:
 
 	c:\Users>cd c:\Users\mrs Water\Documents\python tools
 
-and presto! you should be ready to run scripts via CMD. Now go ahead to execute your python scripts
+and presto! you should be ready to run your scripts via CMD. Now go ahead to execute your python scripts
 
 example:
 
-	python win_event_log_analyzer.py
+	python users_permission_checker.py
 
-However make sure you already have python installed on your windows pc
+for windows-os users
+
+and 
+
+	python3 users_permission_checker.py
+
+for linux-based users 
+
+However windows-os users should make sure they already have python installed on their windows PCs
 
 	pip install pywin32
 
