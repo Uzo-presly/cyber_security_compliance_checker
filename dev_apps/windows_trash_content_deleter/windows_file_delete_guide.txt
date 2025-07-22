@@ -1,0 +1,41 @@
+ Here's a Windows-compatible Python script that:
+
+    Scans the Recycle Bin
+
+    Flags suspicious files by extension (e.g., .exe, .bat, .scr, .vbs)
+
+    Lists non-suspicious files too
+
+    Prompts you to securely delete or keep each non-suspicious file
+
+    Uses secure deletion via sdelete (Microsoft Sysinternals tool)
+
+🪟 Secure Recycle Bin Cleaner for Windows (Python)
+
+    ⚠️ Before running:
+
+        Download sdelete64.exe from Microsoft Sysinternals:
+        👉 https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete
+
+        Place it in the same folder as this script, or ensure it's on your PATH.
+Requirements
+
+Install winshell (only needed once):
+
+pip install winshell
+
+✅ Output Example
+
+🔍 Scanning Recycle Bin...
+
+📁 Found: C:\$Recycle.Bin\S-1-5-21...\test.exe
+⚠️ SUSPICIOUS file detected!
+
+📁 Found: C:\$Recycle.Bin\S-1-5-21...\old_report.docx
+🗑️ Do you want to securely delete this file? (y/n):
+
+
+Securely deleting a file that has no special attributes is relatively straight-forward:
+ the secure delete program simply overwrites the file with the secure delete pattern.
+ What is more tricky is securely deleting Windows NT/2K compressed, encrypted and sparse files,
+ and securely cleansing disk free spaces.

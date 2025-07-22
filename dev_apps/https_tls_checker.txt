@@ -1,0 +1,119 @@
+What is https_tls_scanner.py supposed to do?
+
+Imagine you're checking if a lock on a friend's house door is strong or weak.
+
+Now replace the house with a website, and the lock with something called TLS (Transport Layer Security) — that’s the tech that keeps your connection private when visiting websites (you know, those with a padlock 🔒 in the address bar like https://google.com).
+
+So...
+
+    https_tls_scanner.py is a script that checks how good (or bad) the security lock (TLS settings) of a website is.
+
+It tries to:
+
+    Connect to a website's HTTPS server
+
+    Ask the server: "What kind of locks (TLS versions) do you use?"
+
+    Then tell you if that lock is old, weak, or okay.
+
+🧠 Why do you get tracebacks when you run it?
+
+Because:
+
+    It may be trying to connect to a website that’s down or blocked.
+
+    Or it's trying to use a library or version of Python that isn't working properly.
+
+    Or you didn’t give it the right input, like a proper website address.
+
+💻 A 12-Year-Old's Analogy
+
+Think of the script like a "Security Inspector Robot" you built:
+
+    You give it a list of houses (websites).
+
+    It visits each house and says: “Hey! What kind of door lock do you use?”
+
+    Then it reports back: “This one’s strong 🔒” or “Oh no, this one still uses an old rusty lock! 🚪⚠️”
+
+If your robot trips and falls during the visit — that’s what the traceback is: an error report saying “Oops! I ran into a problem.”
+What this new script will do:
+
+    Ask you to enter a website (like google.com)
+
+    Try to connect to the website over HTTPS (port 443)
+
+    Tell you what TLS version and cipher the server is using
+
+    Nicely handle any errors so it doesn't crash with confusing tracebacks
+
+
+To run it:
+
+    Save the code as https_tls_scanner_simple.py.
+
+    Open your terminal in that folder.
+
+    Run:
+
+python3 https_tls_scanner_simple.py
+
+When prompted, type:
+
+    google.com
+
+You should see something like:
+
+✅ Connected securely!
+   🔒 TLS version: TLSv1.3
+   🔐 Cipher used: ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+
+💡 Bonus: What’s a Cipher?
+
+A cipher is like a special way of scrambling messages so only the right people can read them. The stronger the cipher, the harder it is for hackers to break in.
+
+What If python3 https_tls_scanner_simple.py Fails to Connect?
+
+If the TLS scanner fails to connect to a website, here’s what it might mean — explained like to a 12-year-old:
+🔍 Simple Explanation:
+
+Imagine you’re trying to call a friend on the phone:
+
+    You dial the number.
+
+    You wait to hear them say "Hello!"
+
+If they don’t pick up, it could be because:
+
+    They don’t have signal (site is offline)
+
+    You don’t have signal (your internet is off)
+
+    You typed the wrong number (invalid domain)
+
+    Their phone is blocked (firewall or security issue)
+
+    Their phone speaks another language (not using HTTPS or has an outdated certificate)
+
+💡In Python Terms, You Might See Errors Like:
+Error	What It Means
+socket.gaierror	Couldn’t find the website address (wrong name or no internet)
+ssl.SSLError	The site’s certificate is broken, outdated, or not trusted
+ConnectionRefusedError	The server refused to talk to you
+TimeoutError	The server didn’t answer in time
+OSError: [Errno 101] Network is unreachable	No internet or misconfigured network
+✅ What to Check If It Fails
+
+    Double-check the URL (did you type google.com or something like gooogle.comm?)
+
+    Check your internet connection
+
+    Try another site like:
+
+        https://example.com
+
+        https://github.com
+
+    Use a browser to see if the site opens normally there.
+
+

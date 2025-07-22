@@ -1,0 +1,140 @@
+Oututs like the following:
+ DeprecationWarning: 'spwd' is deprecated and slated for removal in Python 3.13
+  import spwd
+
+=== SYSTEM USER ACCOUNT ANALYSIS ===
+
+🔍 User: root
+UID: 0
+Home: /root
+  - Shell access (/bin/bash)
+  - Created on: 2025-07-17 06:16:19
+----------------------------------------
+🔍 User: uzochi
+UID: 1000
+Home: /home/uzochi
+  - Shell access (/bin/bash)
+  - Created on: 2025-07-21 10:46:27
+----------------------------------------
+
+
+is what you shall see when you execute this script. The same happens with list_user_gui.py.
+python3 list_users_gui.py
+
+or on Windows:
+
+python list_users_gui.py
+
+Both scripts perform the following checks:
+
+    Lists all users
+
+    Flags UID 0 accounts that are not root
+
+    Checks for accounts with:
+
+        No password
+
+        Shell access
+
+        No login history
+
+        Recently added (optional file timestamp)
+
+It basicallyu audits checks — it can help spot suspicious accounts, such as:
+🧨 1. Unexpected new accounts
+
+    A backdoor user will show up in the list of user accounts unless it’s:
+
+        Hidden using rootkit techniques (rare, advanced)
+
+        Created and then disguised (e.g., UID 0 but not named root)
+
+🧨 2. Users with UID 0 that aren’t root
+
+    Only one account should have UID 0 — the root account
+
+    If an attacker adds a second UID 0 account (privileged access), it’s a major red flag
+
+🧨 3. Recently created users
+
+    You can log account creation dates (e.g., using /etc/shadow, /etc/passwd, or audit logs)
+
+    Sudden additions are suspicious, especially with no explanation
+
+🧨 4. Users with no password, shell access
+
+    If a user:
+
+        Has /bin/bash or /bin/sh as a login shell
+
+        Has no password (!! or empty in /etc/shadow)
+
+        That’s often a backdoor attempt
+
+🧨 5. Accounts that don’t appear in login history
+
+    Users created but never logged in → might be a passive backdoor
+
+🛠️ So, can we modify user_account_checker_extended.py to detect that?
+
+Yes, absolutely. We can:
+
+    List all users
+
+    Flag users:
+
+        with UID 0 but not root
+
+        with login shell access and no password
+
+        not present in lastlog (no login history)
+
+        recently added (based on file timestamp)
+
+    Compare against a whitelist of expected users
+
+🔒 Example Output We Can Add:
+
+Suspicious Account Found:
+Username: update-user
+UID: 0
+Shell: /bin/bash
+Password: none
+Last Login: Never
+
+
+Note though that On any computer, there are system-level accounts (created by the OS) and human/user-created accounts.
+When we say “filter out system accounts,” we mean removing OS-level users like:
+On Linux/macOS:
+
+    root, daemon, bin, sys, nobody, etc.
+
+    These are typically accounts with low UIDs (User IDs), e.g., below 1000
+
+    Real users usually have UIDs ≥ 1000
+
+On Windows:
+
+    Accounts like Administrator, DefaultAccount, Guest, WDAGUtilityAccount
+
+    These are mostly default or service-related accounts
+
+Example filtered list on Linux:
+From:
+
+root
+daemon
+bin
+sys
+ubuntu
+
+To:
+
+ubuntu
+
+Filtering system accounts gives you a cleaner view of just the users that humans created, 
+like your own user and others created by admins.
+
+Run user_account_checker_extended.pyt with:
+python3 user_account_checker_extended.py

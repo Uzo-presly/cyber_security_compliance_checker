@@ -1,0 +1,20 @@
+DeprecationWarning: 'spwd' is deprecated and slated for removal in Python 3.13
+The script named users_permission_checker.txt, does not use spwd, and still checks for:
+
+    Username
+
+    UID filtering (to separate system vs real users)
+
+    Home director
+It also uses Tkinter for a graphical interface; an ideal functionality into the GUI rather than just print to the terminal.
+
+Here’s how we have incorporated it:
+
+    Has a button labeled “Check Folder Permissions”.
+
+    When clicked, it will analyze access modes and show the result inside the same output box.
+
+Displays UID and creation timestamp.
+
+
+Results from permission checks are shown inside the same scrollable output window.

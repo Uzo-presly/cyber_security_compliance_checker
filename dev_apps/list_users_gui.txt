@@ -1,0 +1,47 @@
+We use Python’s built-in tkinter module to:
+
+    Create a window (Tk)
+
+    Add a Text widget to display output
+
+    Optionally, add scrollbars and a “Refresh” button
+
+We use:
+
+    pwd.getpwall() to fetch all users (Linux/macOS), or
+
+    subprocess.getoutput('net user') for Windows
+
+Run the script
+
+python3 list_users_gui.py
+
+or on Windows:
+
+python list_users_gui.py
+
+Result:
+
+A GUI window pops up showing current user accounts on your PC!
+
+
+To find which Python script checks user accounts, run this from your terminal (assuming your project folder is dev_app or similar):
+
+cd ~~/protectedVault/mountpoint/cyber_security_compliance_checker/dev_apps$  # ← Adjust this path as needed
+grep -i -r "user" *.py
+
+Explanation:
+
+    grep -i → case-insensitive search
+
+    -r → recursive through subfolders
+
+    "user" → keyword likely in a user-check script
+
+    *.py → limits to Python files
+
+You can also try more precise keywords:
+
+grep -r -E "getpwnam|getpwuid|/etc/passwd|net user" *.py
+
+    This will help identify any script using methods or files related to user account listing.

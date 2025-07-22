@@ -1,0 +1,44 @@
+ Dummy SQLite CRM
+
+Purpose:
+Simulates storing user data (e.g., from a contact form or customer record) in a local database.
+
+Dummy SQLite CRM
+
+A simple CRM to store customer records (name, email, phone, consent, etc.).
+📂 File: dummy_crm.py
+✅ Examples of How to Run It:
+🔹 Example 1: Add a New Customer
+
+python dummy_crm.py --add "Levi uzochi" levi@gmail.com +2348091122334 yes
+
+python example_of_sqlite_documentation.py --add "Ngozi Uzochi" ngozi@gmail.com +2348012345678 yes
+
+✔️ Adds a customer who has given consent.
+🔹 Example 2: View All Customers
+
+python dummy_crm.py --view
+python example_of_sqlite_documentation.py --view
+
+✔️ Lists all stored customer entries in the database.
+🔹 Example 3: Search for a Customer by Name
+
+python dummy_crm.py --search "Ngozi"
+python example_of_sqlite_documentation.py --search "Levi"
+
+✔️ Returns matched entries with “Ngozi” in the name.
+
+How to Use:
+
+    Run the script once. It creates a crm.db SQLite file.
+
+    Inserts a customer record into the database.
+
+    Displays the stored customer info using a SELECT *.
+
+Expected Output:
+
+Customer data added.
+(1, 'Jane Doe', 'jane@example.com', '555-0101', 1)
+
+Success Indicator: Database is created (crm.db file), and your dummy data is shown in the output.

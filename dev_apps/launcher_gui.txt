@@ -1,0 +1,93 @@
+We are creating a Launcher Script
+
+This script lets the user select which tool to run:
+
+    User Account Checker
+
+    PII Checker etc
+
+This launcher named launcher_gui.py is a Launcher GUI that lets you run multiple .exe apps such as users_permission_checker.exe 
+and gives you buttons to launch each .exe.
+
+However PLEASE NOTE that you MUST CONVERT all or any of the .py scripts to .EXE using PyInstaller, before using this launcher
+In Terminal (see an example of what to do for each python script):
+
+pyinstaller --onefile --noconsole users_permission_checker.py
+
+💡 The --noconsole makes it behave like a desktop app (GUI only).
+The .exe files will be inside dist/ folder after build.
+
+Also note that you do not lose your .py file.
+When you convert a Python script (.py) to a Windows executable (.exe) using a tool like PyInstaller, it creates a copy in .exe format. Your original .py file remains intact and untouched.
+🔁 How do you update the .exe if you later modify the .py file?
+
+If you make any changes to the .py file, your .exe file doesn't update automatically.
+To reflect your changes in the .exe:
+✅ Steps to update your .exe:
+
+    Make your changes in your original .py file.
+
+    Rebuild the .exe using PyInstaller or whichever tool you originally used.
+
+Example command:
+
+pyinstaller --onefile your_script.py
+
+pyinstaller --onefile users_permission_checker.py
+
+This command will:
+
+    Read your updated Python file.
+
+    Regenerate a new .exe file inside the /dist folder.
+
+    You can now replace the old .exe with the new one.
+
+
+let’s walk through how to use your launcher_gui.exe to run other dev apps (like List_users_gui.exe or user_account_checker_extended.exe).
+🧭 Overview
+
+The launcher_gui.exe is a graphical launcher — like a home screen that helps you open your tools with a button click.
+
+When you double-click on launcher_gui.exe, it shows you a simple interface with buttons like:
+
+    ✅ Launch User Checker
+
+    ✅ Launch List Users Tool
+
+    ❌ Launch Something Else (if missing)
+
+Each button is hardcoded to execute a specific .exe file located in the same folder.
+✅ Step-by-Step Demonstration
+
+Let’s assume you now have:
+
+    launcher_gui.exe
+
+    users_permission_checker.exe
+
+    List_users_gui.exe
+
+All inside the same folder, e.g.:
+
+C:\MyTools\
+ ├── launcher_gui.exe
+ ├── users_permission_checker.exe
+ └── List_users_gui.exe
+
+🖱️ Step 1: Double-click launcher_gui.exe
+
+A GUI window opens that says:
+
+🔘 Launch User Checker
+🔘 Launch List Users Tool
+
+Final Packaging of Launcher GUI
+
+Convert it to .exe with:
+
+pyinstaller --onefile --noconsole launcher_gui.py
+
+Your launcher is now a simple GUI app that lets you launch any of our .exe files newly deposited in a folder named "dist"
+
+our script named rebuild_exe_launcher.py is a simple script created to rebuild all .exe files from their .py sources when needed.

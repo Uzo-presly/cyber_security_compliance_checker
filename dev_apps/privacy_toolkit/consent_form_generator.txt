@@ -1,0 +1,42 @@
+Dynamic Consent Form Generator
+
+Purpose:
+Generates a personalized consent form template using Python’s string.Template.
+
+How to Use:
+
+    Run the function by calling generate_consent_form() with your client’s name, service, and organization.
+
+    You can integrate this with a web form for automated form generation.
+
+Expected Output:
+
+CONSENT FORM
+-------------
+I, Jane Doe, hereby give Acme Corp the permission to collect and use my personal information
+for the purpose of email marketing, in accordance with data protection regulations.
+...
+
+Success Indicator: Your output should reflect the name, service, and organization correctly.
+
+
+Dynamic Consent Form Generator
+
+Generates customizable consent forms dynamically for clients/patients.
+📂 File: consent_form_generator.py
+✅ Examples of How to Run It:
+🔹 Example 1: Generate Default Consent Form
+
+python consent_form_generator.py --name "John Smith" --purpose "receiving promotional emails"
+
+✔️ Prints out a consent letter in text form for John Smith.
+🔹 Example 2: Save Consent Form to File
+
+python consent_form_generator.py --name "Mary Jane" --purpose "medical treatment" --outfile mary_consent.txt
+
+✔️ Saves the generated form to mary_consent.txt.
+🔹 Example 3: Customize with Expiry Date
+
+python consent_form_generator.py --name "Elijah" --purpose "newsletter subscription" --expiry "2026-12-31"
+
+✔️ Adds a custom expiry date to the consent text.

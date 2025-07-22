@@ -1,0 +1,33 @@
+Here's a friendly rebuild helper script — a small .py file you can double-click anytime you’ve updated your Python codes
+ and want to rebuild your .exe file using PyInstaller. Saved as:rebuild_exe_launcher.py
+What This Script Does:
+
+    Opens a window with a button.
+
+    When you click it, it asks you to select a .py file.
+
+    It then asks if you want to rebuild it.
+
+    If you click Yes, it runs pyinstaller --onefile your_script.py.
+
+    Your new .exe will show up in the dist folder automatically.
+
+🧾 How to Use:
+
+    Make sure PyInstaller is installed:
+
+    pip install pyinstaller
+
+    Double-click the rebuild_exe_launcher.py file.
+
+    Select your .py file (the one you’ve updated).
+
+    Let the miracle happen! ✨
+
+🚀 Bonus Tip:
+
+You can convert this launcher itself to .exe using:
+
+pyinstaller --onefile rebuild_exe_launcher.py
+
+Then, next time, you don’t need Python at all — just click rebuild_exe_launcher.exe and rebuild any .py to .exe with ease.

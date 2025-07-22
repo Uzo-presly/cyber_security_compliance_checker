@@ -1,0 +1,40 @@
+Python Encryption Tool for PII
+
+This script encrypts sensitive data (e.g., names, phone numbers) using Fernet encryption.
+📂 File: encrypting_pii.py
+✅ Examples of How to Run It:
+🔹 Example 1: Encrypt and Save to File
+
+python encrypting_pii.py --encrypt "John Doe, +2348012345678" --outfile encrypted_data.txt
+
+✔️ This encrypts the string and saves it in encrypted_data.txt.
+🔹 Example 2: Decrypt from File
+
+python encrypting_pii.py --decrypt-from encrypted_data.txt
+
+✔️ This decrypts and displays the content previously saved.
+🔹 Example 3: Generate a New Encryption Key
+
+python encrypting_pii.py --generate-key
+
+✔️ Creates a .key file that stores your encryption key securely.
+Purpose:
+Secure sensitive user data like emails, passwords, or phone numbers using symmetric encryption.
+
+How to Use:
+
+    Run the script in a Python environment with cryptography installed (pip install cryptography).
+
+    Replace "user@example.com" with any sensitive string you want to encrypt.
+
+    Store the key securely—without it, you can't decrypt the data.
+
+Expected Output:
+You’ll see:
+
+Original Data: user@example.com
+Encrypted: b'gAAAAAB...'
+Decrypted: user@example.com
+
+Success Indicator: The decrypted value matches the original.
+

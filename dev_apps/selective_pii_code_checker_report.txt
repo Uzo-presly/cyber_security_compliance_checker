@@ -1,0 +1,80 @@
+selective_pii_code_checker.py is a source code analysis tool.
+ It works by scanning local script files (e.g., .py, .js, .php, etc.) for patterns that may leak
+ Personally Identifiable Information (PII), such as unmasked names, emails, phone numbers,
+ or poor handling of data storage, logging, or API requests.
+
+To analyze a live site, you’d first need to download or mirror the relevant JavaScript, HTML, or backend scripts
+ used by that website. (say like a healthrecord site for a hospital so as to warn them of patients info leak)
+What You Can Do Instead
+🧰 Use pii_code_checker.py in Two Stages:
+
+    Use a crawler tool (like wget, curl, or HTTrack) to download the site’s front-end source code (public JS, HTML).
+
+    Run selective_pii_code_checker.py or cyber_security_proj_runner.py on those downloaded files.
+
+🔧 Demonstration
+✅ Step 1: Mirror the Website Public Files
+
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://smartclinichealthrecords.com/dashboard/
+
+This will create a folder with all the static files like:
+
+smartclinichealthrecords.com/dashboard/
+├── index.html
+├── js/
+├── css/
+└── assets/
+
+✅ Step 2: Run selective_pii_code_checker.py on the Files
+
+python3 selective_pii_code_checker.py --target smartclinichealthrecords.com/dashboard/js
+
+You can also use:
+
+python3 selective_pii_code_checker.py --target smartclinichealthrecords.com
+
+It will recursively scan all source files and flag potential data risks.
+🧪 Optional: Use with cyber_security_proj_runner.py
+
+python3 cyber_security_proj_runner.py \
+  --target=smartclinichealthrecords.com \
+  --framework=NDPR \
+  --audit-code=smartclinichealthrecords.com/dashboard/js/script.js
+
+You’re telling it:
+
+    What framework to use (--framework)
+
+    Where your code or data is (--target)
+
+    And what specific script to analyze (--audit-code)
+
+So cyber_security_proj_runner.py works standalone as a CLI tool!
+
+If cyber_security_proj_runner.py is properly written to dynamically call pii_code_checker.py internally or as part of its workflow, this is possible.
+🆚 Comparison: Running Directly vs. via cyber_security_proj_runner.py
+Use Case	          		 Use selective_pii_code_checker.py Directly   		Use via cyber_security_proj_runner.py
+Quick ad-hoc check on a script or folder	✅ Best							❌ Overkill
+Part of a larger compliance framework
+ (e.g., NDPR or GDPR)				❌ Limited						✅ Ideal
+Want a summarized PDF/report
+ from other tools too		   		❌ Not built-in					✅ Possible with integration
+
+CI/CD integration				✅ Simple					✅ Excellent (if extended properly)
+🧠 Final Thoughts
+
+    selective_pii_code_checker.py is best when you have direct access to source code.
+
+    It does not parse remote HTTP traffic, but works on file content.
+
+    If you want to monitor real-time network vulnerabilities, combine it with:
+
+        Tools like Burp Suite, OWASP ZAP, or browser Network tab
+
+        Or, your own logger/sniffer (e.g., requests or mitmproxy)
+
+Would you like me to:
+
+    Provide you a prebuilt pii_code_checker.py template with regex for email, names, NIN, etc.?
+
+    Help refactor cyber_security_proj_runner.py to include this tool internally?
