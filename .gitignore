@@ -37,6 +37,8 @@ dev_apps/policy_compliance_checker.py
 dev_apps/smartclinichealthrecords.com
 dev_apps/.config.json
 grant_accountability_kit.txt
+requirements.txt
+
 # Virtual environment
 .venv/
 venv/
@@ -57,7 +59,7 @@ myvenv/
 # Output reports and logs
 results/
 *.log
-*.txt
+.*.txt
 *.csv
 
 # OS and editor-specific
