@@ -53,7 +53,8 @@ Install dependencies:
     pip install -r requirements.txt
 
 🔧 Tools & Scripts
-Beside almost each python script, is a .txt file with a detailed explanation of its purpose and usage.
+For better comprehension, i have attached beside virtually each python script, a .txt file.
+The text file is supposed to give a detailed explanation of its python script's-purpose and usage.
 
 
 📦 Requirements
