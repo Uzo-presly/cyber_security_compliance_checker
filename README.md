@@ -7,7 +7,7 @@ Each tool focuses on a specific area such as GDPR policy compliance, TLS/SSL val
    
  💡 "These project reflects my passion to contribute as part of God's creation by making digital protection more accessible to everyday users." — Uzochi Presly
 
-This project is generally a Python-based toolkit primarily to help users scan and analyze codebases, system settings,
+You are looking at largely, a Python-based toolkit primarily to help users scan and analyze codebases, system settings,
  and policies for compliance with various data protection frameworks:
 
 - ✅ **GDPR**
