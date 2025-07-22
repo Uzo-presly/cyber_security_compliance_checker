@@ -38,11 +38,13 @@ You are looking at largely, a Python-based toolkit primarily to help users scan 
     Clone the repository:
 
 git clone https://github.com/uzo-presly/cyber_security_compliance_checker.git
+
 cd cyber_security_compliance_checker
 
 Create and activate a virtual environment:
 
 python3 -m venv myvenv
+
 source myvenv/bin/activate
 
 Install dependencies:
@@ -77,46 +79,52 @@ How to Install pywin32 on Your Windows PC
         Type cmd
         Press Enter
         (Alternatively, you can right-click and select "Run as administrator" to be safe.)
-    Check that Python and pip are installed
+Check that Python and pip are installed
 
-python --version
-pip --version
+	python --version
+
+	pip --version
 
 If both work and return versions like Python 3.10.11, proceed.
 
-If they don’t work, download Python from https://www.python.org/downloads/windows
+For Windows OS Users: If they don’t work, download Python from https://www.python.org/downloads/windows
 
 ✅ During install, make sure to check "Add Python to PATH"
 
-To change directory on cmd on windows so as to execute a file, see the following example:
-assuming we are here 
+To change directory via cmd on a windows-OS PC, so as to execute a script; see the following example:
+assuming we are here: 
 
-c:\Users>
+	c:\Users>
 
-and we want to get to a  path like
+and we want to get to a  path like:
 
- \Users\mrs Water\Documents\python tools
+	\Users\mrs Water\Documents\python tools
 
-manually go to the location, and press shift while you right-click on the folder of the intended python files to execute,
+.., just manually go to that location on your PC, and press SHIFT while you Right-click on the folder containing the intended python scripts to be run,
 
- like \Users\mrs Water\Documents\python tools
+ a cpoied path could look like this example:
 
-and copy the full path
-then go back to cmd box and paste in the path in front of
- c:\Users>
+	\Users\mrs Water\Documents\python tools
+
+.., just go ahead and copy the full path by clicking the 'copy path' on the pop-up box, 
+
+then go back to CMD-page and paste in the path in front of:
+
+	c:\Users>
 
 for instance:
 
-c:\Users>cd c:\Users\mrs Water\Documents\python tools
+	c:\Users>cd c:\Users\mrs Water\Documents\python tools
 
-and presto! you should be there. Now go ahead to execute your python file
+and presto! you should be ready to run scripts via CMD. Now go ahead to execute your python scripts
 
-example python win_event_log_analyzer.py
+example:
+
+	python win_event_log_analyzer.py
 
 However make sure you already have python installed on your windows pc
-    Install pywin32
 
-pip install pywin32
+	pip install pywin32
 
 This will download and install the required modules from the Python Package Index (PyPI).
 
@@ -131,7 +139,7 @@ python
 
 If you see no errors, you're ready to run the scripts like:
 
-python win_event_log_analyzer.py
+	python win_event_log_analyzer.py
 
 🤝 How to Contribute
 
