@@ -1,4 +1,6 @@
-Oututs like the following:
+This script is similar in character to users_permission_checker.py script only it is using a deprecated command known as 'spwd'
+
+Therefore its oututs would constatntly look like the following:
  DeprecationWarning: 'spwd' is deprecated and slated for removal in Python 3.13
   import spwd
 

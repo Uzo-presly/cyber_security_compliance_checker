@@ -1,0 +1,8 @@
+pii_code_checker_regex_verbose_log.py is a source code analysis tool 
+It is a slower but deeper-search version of selective_pii_code_checker.py
+because it is intentionally designed to do a longer but thorough search of all files in its way to scan,
+with verbose, it works similarly by scanning local script files (e.g., .py, .js, .php, etc.) for patterns that may leak
+ Personally Identifiable Information (PII), such as unmasked names, emails, phone numbers,
+ or poor handling of data storage, logging, or API requests.
+
+For more on this scripts' common-behaviour, please see selective_pii_code_checker.txt

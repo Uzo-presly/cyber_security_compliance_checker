@@ -1,5 +1,6 @@
-selective_pii_code_checker.py is a source code analysis tool.
- It works by scanning local script files (e.g., .py, .js, .php, etc.) for patterns that may leak
+selective_pii_code_checker.py is a source code analysis tool and is a faster version of pii_code_checker_regex_verbose_log.py 
+because it is intentionally selective of the types of files to scan, as you would observe in the exceptions code-line.
+Aside from the indicated exceptions, it works by scanning local script files (e.g., .py, .js, .php, etc.) for patterns that may leak
  Personally Identifiable Information (PII), such as unmasked names, emails, phone numbers,
  or poor handling of data storage, logging, or API requests.
 
