@@ -58,6 +58,10 @@ next,
 For better comprehension, i have attached beside virtually each python script, a .txt file.
 The text file is supposed to give a detailed explanation of its python script's-purpose and usage.
 
+for instance:
+
+	https_tls_checker.py  
+	https_tls_checker.txt 
 
 📦 Requirements
 
