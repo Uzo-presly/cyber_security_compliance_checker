@@ -35,6 +35,7 @@ dev_apps/https_tls_scanner.py
 dev_apps/registry_privacy_checker.py
 dev_apps/policy_compliance_checker.py
 dev_apps/smartclinichealthrecords.com
+dev_apps/.config.json
 grant_accountability_kit.txt
 # Virtual environment
 .venv/
