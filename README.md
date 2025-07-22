@@ -35,11 +35,12 @@ You are looking at largely, a Python-based toolkit primarily to help users scan 
 
 🧰 Getting Started
 
-    		Clone the repository:
+Clone the repository:
 
 	git clone https://github.com/uzo-presly/cyber_security_compliance_checker.git
 
-cd cyber_security_compliance_checker
+	
+	cd cyber_security_compliance_checker
 
 Create and activate a virtual environment:
 
@@ -140,10 +141,10 @@ This will download and install the required modules from the Python Package Inde
 
 After install, run:
 
-python
->>> import win32evtlog
->>> import win32api
->>> exit()
+	python
+	>>> import win32evtlog
+	>>> import win32api
+	>>> exit()
 
 If you see no errors, you're ready to run the scripts like:
 
@@ -161,14 +162,14 @@ Road Map:
 
 Expected scripts that:
 
-- 🔐 Perform firewall checks--	-	-Done
+	- 🔐 Perform firewall checks--	-	-Done
 
-- 🔍 Run static code scans--	-	-Done
+	- 🔍 Run static code scans--	-	-Done
 
-- 📊 Perform compliance analysis-	-On-going
+	- 📊 Perform compliance analysis-	-On-going
 
-- 🧠 Leverage AI (via OpenAI API) to reason about policies-	-On-going
+	- 🧠 Leverage AI (via OpenAI API) to reason about policies-	-On-going
 
-- Check if a website or server uses secure TLS protocols and identify weak cipher suites.-	-Done
+	- Check if a website or server uses secure TLS protocols and identify weak cipher suites.-	-Done
 
-- Securely clean recycle bin /Trash-	-Done
+	- Securely clean recycle bin /Trash-	-On-going
