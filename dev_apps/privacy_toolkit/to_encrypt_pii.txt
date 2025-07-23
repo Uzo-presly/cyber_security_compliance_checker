@@ -1,0 +1,82 @@
+Python Encryption Tool for PII
+
+This script encrypts sensitive data (e.g., names, phone numbers) using Fernet encryption.
+STEP 1: Document the Raw PII in a File
+
+You create and update a file like plaintext_data.txt:
+
+John Doe, +2348012345678, No. 5 Alpha Street, Lagos
+Ngozi Uzochi, +2348076543210, No. 7 Beta Road, Abuja
+
+This is your ongoing documentation. You keep adding to this file.
+
+🛠 How to Use It (Scenarios)
+🔹 1. Generate the Key
+
+Only done once:
+
+python encrypting_pii.py --generate-key
+
+🔒 This creates pii_access.key.
+🔹 2. Add Info to Your Plaintext File (Shared by All)
+
+E.g., plaintext_data.txt:
+
+Mr. John Doe, +2348012345678, 123 Main Street, Owerri
+Mrs. Ngozi Uzochi, +2348023456789, 45 Uzo Avenue, Enugu
+
+🔹 3. Encrypt the Whole File
+
+python encrypting_pii.py --encrypt-file plaintext_data.txt --outfile encrypted_data.txt
+
+🔐 Now encrypted_data.txt contains the encrypted info.
+🔹 4. Decrypt When Needed
+
+If pii_access.key is present:
+
+python encrypting_pii.py --decrypt-from encrypted_data.txt
+
+If pii_access.key is missing, the script will ask:
+
+[?] Paste your decryption key:
+
+🔑 User pastes the content of the key from a secure note or password manager.
+🧩 Practical Setup with the Three Staff
+
+Assume:
+
+    Only one company PC holds the plaintext_data.txt file.
+
+    All three staff need to access encrypted_data.txt, which is backed up or shared (e.g., via cloud or flash drive).
+
+    The key file pii_access.key is never emailed or stored openly.
+
+🔐 Key Distribution
+
+    When the key is generated, copy its content (base64 string like b'GsZ...==')
+
+    Securely share this key only once with each staff via:
+
+        A hardware password manager (e.g., KeePass, Bitwarden)
+
+        Handwriting the key and storing it in a locked cabinet
+
+        Flash drive or QR code transferred under supervision
+
+🔐 Key Storage Options for Staff
+
+Each staff can:
+
+    Save it in a secure password vault
+
+    Paste it manually when prompted (if pii_access.key is missing)
+
+    Store it on a company USB key that they plug into the hub PC when needed
+
+✅ Summary: Phases and Security
+Phase	What Happens
+🔑 Key Generation	pii_access.key created; copied to 3 staff securely
+📄 Info Documentation	Data written or appended to plaintext_data.txt (kept safe on hub PC)
+🔐 Encryption Process	Entire file encrypted with --encrypt-file
+🔁 Decryption	Requires the key file OR key pasted manually at prompt
+🧑‍💼 Staff Access Control	Each staff must possess the key to view data; PC enforces no plaintext access

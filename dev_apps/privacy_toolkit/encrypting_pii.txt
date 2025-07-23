@@ -1,40 +1,61 @@
-Python Encryption Tool for PII
+python Encryption Tool for PII but is not as powerful as t-_encrypt_pii.py script as it does not prompt you for a key
+instead it assumes the key file is present in the same folder with the python file running it. This option can be a problem if the key-file goes missing.
 
 This script encrypts sensitive data (e.g., names, phone numbers) using Fernet encryption.
-📂 File: encrypting_pii.py
-✅ Examples of How to Run It:
-🔹 Example 1: Encrypt and Save to File
+STEP 1: Document the Raw PII in a File
 
-python encrypting_pii.py --encrypt "John Doe, +2348012345678" --outfile encrypted_data.txt
+You create and update a file like plaintext_data.txt:
 
-✔️ This encrypts the string and saves it in encrypted_data.txt.
-🔹 Example 2: Decrypt from File
+John Doe, +2348012345678, No. 5 Alpha Street, Lagos
+Ngozi Uzochi, +2348076543210, No. 7 Beta Road, Abuja
 
-python encrypting_pii.py --decrypt-from encrypted_data.txt
+This is your ongoing documentation. You keep adding to this file.
 
-✔️ This decrypts and displays the content previously saved.
-🔹 Example 3: Generate a New Encryption Key
+ Staff Usage Workflow
+🔐 STEP 1: The Admin (You) Initializes the System
 
 python encrypting_pii.py --generate-key
 
-✔️ Creates a .key file that stores your encryption key securely.
-Purpose:
-Secure sensitive user data like emails, passwords, or phone numbers using symmetric encryption.
+    You'll be prompted to set a shared password (e.g., "TeamAccess123").
 
-How to Use:
+    This creates:
 
-    Run the script in a Python environment with cryptography installed (pip install cryptography).
+        A real key (used for encryption)
 
-    Replace "user@example.com" with any sensitive string you want to encrypt.
+        An encrypted version of that key: encrypted_key.key
 
-    Store the key securely—without it, you can't decrypt the data.
+    The plaintext_data.txt file can now be filled with sensitive data like:
 
-Expected Output:
-You’ll see:
+John Doe, 08012345678, 123 Abuja Lane
+Ngozi Uzochi, 07098765432, 45 Enugu Street
 
-Original Data: user@example.com
-Encrypted: b'gAAAAAB...'
-Decrypted: user@example.com
+✍️ STEP 2: Update and Encrypt Data Anytime
 
-Success Indicator: The decrypted value matches the original.
+python encrypting_pii.py --encrypt
 
+    Staff enters the shared password to unlock the encryption key.
+
+    plaintext_data.txt is encrypted into encrypted_data.txt.
+
+🔓 STEP 3: Any Staff Can Decrypt
+
+python encrypting_pii.py --decrypt
+
+    Staff is prompted for the shared password.
+
+    If it's correct, the encrypted data is decrypted and shown.
+
+📦 Summary of File Roles
+File	Purpose
+plaintext_data.txt	The original info (editable, only on central hub PC)
+encrypted_data.txt	The protected version (can be backed up, shared)
+encrypted_key.key	Holds the real encryption key but locked with a password
+encrypting_pii.py	Script that manages all actions
+Shared Password	Known by the 3 staff members only
+🔐 Optional Security Tips
+
+    Store plaintext_data.txt only on a secure hub PC. Not to be synced or emailed.
+
+    The 3 staff should each know the shared password but not copy the raw encryption key file to their own devices.
+
+    Back up encrypted_data.txt and encrypted_key.key somewhere safe (e.g., USB, cloud with access control).
